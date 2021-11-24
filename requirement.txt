@@ -1,0 +1,12 @@
+tensorboard
+easydict
+sklearn
+matplotlib
+pandas
+scikit-image
+menpo
+prettytable
+mxnet==1.6.0
+pytorch_summary
+cv2
+torch==1.7.1
