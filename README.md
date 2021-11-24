@@ -32,11 +32,11 @@ Set the following in the config.py
 Run ./run.sh
 
 ## Pretrained model
-#### CR-FIQA(L)
-[CR-FIQA(L)](https://drive.google.com/drive/folders/1siy_3eQSBuIV6U6_9wgGtbZG2GMgVLMy?usp=sharing)
 
-#### CR-FIQA(S)
-[CR-FIQA(S)](https://drive.google.com/drive/folders/13bE4LP303XA_IzL1YOgG5eN0c8efHU9h?usp=sharing)
+#### [CR-FIQA(L)](https://drive.google.com/drive/folders/1siy_3eQSBuIV6U6_9wgGtbZG2GMgVLMy?usp=sharing)
+
+
+#### [CR-FIQA(S)](https://drive.google.com/drive/folders/13bE4LP303XA_IzL1YOgG5eN0c8efHU9h?usp=sharing)
 
 ### Evaluation 
 Follow these steps to reproduce the results on XQLFW.
