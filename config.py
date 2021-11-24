@@ -2,19 +2,18 @@ from easydict import EasyDict as edict
 
 config = edict()
 config.dataset = "webface" # training dataset
-config.embedding_size = 512 # embedding size of model
+config.embedding_size = 512 # embedding size of evaluation
 config.momentum = 0.9
 config.weight_decay = 5e-4
 config.batch_size = 128 # batch size per GPU
 config.lr = 0.01
-config.output = "output/R50_Center_OnTop" # train model output folder
+config.output = "output/R50_CRFIQA" # train evaluation output folder
 config.global_step=0 # step to resume
 config.s=64.0
 config.m=0.50
 config.beta=0.5
 
-config.identity_model="/home/fboutros/face_recognition/output/ResNet50-0.5-50epoch_se/"
-config.identity_step=32572
+
 
 # type of network to train [ iresnet100 | iresnet50 ]
 config.network = "iresnet50"
@@ -26,7 +25,7 @@ if config.dataset == "emoreIresNet":
     config.rec = "/data/psiebke/faces_emore"
     config.num_classes = 85742
     config.num_image = 5822653
-    config.num_epoch =  26
+    config.num_epoch =  18
     config.warmup_epoch = -1
     config.val_targets = ["lfw", "cfp_fp", "cfp_ff", "agedb_30", "calfw", "cplfw"]
     config.eval_step=5686

@@ -47,7 +47,7 @@ def main(args):
         local_rank=local_rank, dataset=trainset, batch_size=cfg.batch_size,
         sampler=train_sampler, num_workers=16, pin_memory=True, drop_last=True)
 
-    # load model
+    # load evaluation
 
     if cfg.network == "iresnet100":
         backbone = iresnet100(dropout=0.4,num_features=cfg.embedding_size).to(local_rank)
