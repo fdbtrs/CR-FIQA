@@ -17,6 +17,15 @@ Download CASIA dataset from [insightface](https://github.com/deepinsight/insight
 
 Unzip the dataset and place it in the data folder
 
+
+Intall the requirement from requirement.txt
+
+pip install -r requirements.txt
+
+All code are trained and tested using PyTorch 1.7.1
+Details are under (Torch)[https://pytorch.org/get-started/locally/]
+
+
 ### For training CR-FIQA(L)
 Set the following in the config.py
 1. config.output to output dir 
