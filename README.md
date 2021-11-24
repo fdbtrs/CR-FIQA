@@ -4,7 +4,7 @@
 ## This is the official repository of the paper:
 #### CR-FIQA: Face Image Quality Assessment by Learning Sample Relative Classifiability 
 
-### Face recognition  model training 
+### CR-FIQA model training 
 Model training:
 In the paper, we employ MS1MV2 as the training dataset for CR-FIQA(L) which can be downloaded from InsightFace (MS1M-ArcFace in DataZoo)
 
