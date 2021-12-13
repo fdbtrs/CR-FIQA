@@ -22,7 +22,7 @@ config.network = "iresnet50"
 
 
 if config.dataset == "emoreIresNet":
-    config.rec = "/data/psiebke/faces_emore"
+    config.rec = "datafaces_emore"
     config.num_classes = 85742
     config.num_image = 5822653
     config.num_epoch =  18
@@ -35,7 +35,7 @@ if config.dataset == "emoreIresNet":
     config.lr_func = lr_step_func
 
 elif config.dataset == "webface":
-    config.rec = "/home/psiebke/faces_webface_112x112"
+    config.rec = "data/faces_webface_112x112"
     config.num_classes = 10572
     config.num_image = 501195
     config.num_epoch = 34   #  [22, 30, 35] [22, 30, 40]
