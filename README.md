@@ -79,7 +79,7 @@ The quality score of LFW, AgeDB-30, CFP-FP, CALFW, CPLFW can be produced by foll
 3. Run python3 ERC/erc.py (details in  ERC/README.md)
 
 
-## Citing ##
+## Citation ##
 If you use any of the code provided in this repository or the models provided, please cite the following paper:
 ```
 @misc{fboutros_CR_FIQA,
