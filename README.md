@@ -4,9 +4,13 @@
 
 <img src="utils/workflow.png"> 
 
+<hr/>
+
 A private copy of the paper is available under [CF-FIQA](utils/CVPR_FIQA_arxiv.pdf)
 
-## CR-FIQA model training ##
+<hr/>
+
+## CR-FIQA training ##
 1. In the paper, we employ MS1MV2 as the training dataset for CR-FIQA(L) which can be downloaded from InsightFace (MS1M-ArcFace in DataZoo)
     1. Download MS1MV2 dataset from [insightface](https://github.com/deepinsight/insightface/tree/master/recognition/_datasets_) on strictly follow the licence distribution
 3. We use CASIA-WebFace as the training dataset for CR-FIQA(S) which can be downloaded from InsightFace (CASIA in DataZoo)
@@ -16,6 +20,7 @@ A private copy of the paper is available under [CF-FIQA](utils/CVPR_FIQA_arxiv.p
 6. pip install -r requirements.txt
 7. All code are trained and tested using PyTorch 1.7.1
 Details are under (Torch)[https://pytorch.org/get-started/locally/]
+<hr/>
 
 ### CR-FIQA(L) ###
 Set the following in the config.py
@@ -23,6 +28,8 @@ Set the following in the config.py
 2. config.network = "iresnet100"
 3. config.dataset = "emoreIresNet" 
 4. Run ./run.sh
+<hr/>
+
 ###  CR-FIQA(S) ###
 Set the following in the config.py
 1. config.output to output dir 
@@ -37,7 +44,7 @@ Set the following in the config.py
 
 #### [CR-FIQA(S)](https://drive.google.com/drive/folders/13bE4LP303XA_IzL1YOgG5eN0c8efHU9h?usp=sharing)
 
-### Evaluation  ###
+## Evaluation ##
 Follow these steps to reproduce the results on XQLFW:
 1. Download the [XQLFW](https://martlgap.github.io/xqlfw/pages/download.html) (please download xqlfw_aligned_112.zip)
 2. Unzip XQLFW (Folder structure should look like this ./data/XQLFW/xqlfw_aligned_112/)
@@ -65,14 +72,14 @@ The quality score of LFW, AgeDB-30, CFP-FP, CALFW, CPLFW can be produced by foll
         2. run: python3 evaluation/getQualityScorce.py --data_dir "./data/quality_data" --datasets "XQLFW" --model_path "path_to_pretrained_CF_FIQAL_model" --backbone "iresnet50" --model_id "32572" --score_file_name "CRFIQAS.txt"
         
      
-### Ploting ERC curves ###
+## Ploting ERC curves ##
 1. Download pretrained model e.g. [ElasticFace-Arc](https://github.com/fdbtrs/ElasticFace), [MagFac](https://github.com/IrvingMeng/MagFace), [CurricularFace](https://github.com/HuangYG123/CurricularFace) or [ArcFace](https://github.com/deepinsight/insightface)
 2. Run CUDA_VISIBLE_DEVICES=0 python feature_extraction/extract_emb.py --model_path ./pretrained/ElasticFace --model_id 295672 --dataset_path "./data/quality_data/XQLFW" --modelname "ElasticFaceModel"
     2.1 Note: change the path to pretrained model and other arguments according to the evaluated model 
 3. Run python3 ERC/erc.py (details in  ERC/README.md)
 
 
-### Citing ###
+## Citing ##
 If you use any of the code provided in this repository or the models provided, please cite the following paper:
 ```
 @misc{fboutros_CR_FIQA,
@@ -86,7 +93,7 @@ If you use any of the code provided in this repository or the models provided, p
 ```
 
 
-### License ###
+## License ##
 
 This project is licensed under the terms of the Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license.
 Copyright (c) 2021 Fraunhofer Institute for Computer Graphics Research IGD Darmstadt
