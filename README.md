@@ -6,7 +6,7 @@
 
 <hr/>
 
-A private copy of the paper is available under [CF-FIQA](utils/CVPR_FIQA_arxiv.pdf)
+A private copy of the paper is available under [CR-FIQA](utils/CVPR_FIQA_arxiv.pdf)
 
 <hr/>
 
