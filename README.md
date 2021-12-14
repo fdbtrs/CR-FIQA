@@ -2,13 +2,13 @@
 #### This is the official repository of the paper:
 ### CR-FIQA: Face Image Quality Assessment by Learning Sample Relative Classifiability 
 
+Arxiv: [CR-FIQA](https://arxiv.org/abs/2112.06592)
+
 <img src="utils/workflow.png"> 
 
 <hr/>
 
-A private copy of the paper is available under [CR-FIQA](utils/CVPR_FIQA_arxiv.pdf)
 
-<hr/>
 
 ## CR-FIQA training ##
 1. In the paper, we employ MS1MV2 as the training dataset for CR-FIQA(L) which can be downloaded from InsightFace (MS1M-ArcFace in DataZoo)
@@ -82,11 +82,11 @@ The quality score of LFW, AgeDB-30, CFP-FP, CALFW, CPLFW can be produced by foll
 ## Citation ##
 If you use any of the code provided in this repository or the models provided, please cite the following paper:
 ```
-@misc{fboutros_CR_FIQA,
+@misc{boutros2021crfiqa,
       title={CR-FIQA: Face Image Quality Assessment by Learning Sample Relative Classifiability}, 
-      author={Fadi Boutros, Meiling Fang, Marcel Klemt, Biying Fu, Naser Damer},
+      author={Fadi Boutros and Meiling Fang and Marcel Klemt and Biying Fu and Naser Damer},
       year={2021},
-      eprint={},
+      eprint={2112.06592},
       archivePrefix={arXiv},
       primaryClass={cs.CV}
 }
