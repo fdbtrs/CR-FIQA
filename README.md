@@ -1,7 +1,7 @@
 
 #### This is the official repository of the paper:
 ### CR-FIQA: Face Image Quality Assessment by Learning Sample Relative Classifiability 
-
+### Paper accepted at [CVPR 2023](https://cvpr2023.thecvf.com/)
 Arxiv: [CR-FIQA](https://arxiv.org/abs/2112.06592)
 
 <img src="utils/workflow.png"> 
