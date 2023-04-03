@@ -16,9 +16,11 @@ class FaceModel():
     def _getFeatureBlob(self,input_blob):
         pass
 
-    def get_feature(self, image_path):
+    def get_feature(self, image_path, color="BGR"):
         image = cv2.imread(image_path)
         image = cv2.resize(image, (112, 112))
+        if (color == "RGB"):
+            image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         a = np.transpose(image, (2, 0, 1))
         input_blob = np.expand_dims(a, axis=0)
         emb=self._getFeatureBlob(input_blob)
