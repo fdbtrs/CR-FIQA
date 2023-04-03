@@ -43,7 +43,7 @@ def main(param):
     for dataset in datasets:
         root=os.path.join(param.data_dir)
         image_list, absolute_list=read_image_list(os.path.join(param.data_dir,'quality_data',dataset,'image_path_list.txt'), root)
-        embedding, quality=face_model.get_batch_feature(image_list,batch_size=16)
+        embedding, quality=face_model.get_batch_feature(image_list,batch_size=16, color=param.color_channel)
         if (os.path.isdir(os.path.join(param.data_dir,'quality_data',dataset))):
             os.makedirs(os.path.join(param.data_dir,'quality_data',dataset))
         quality_score=open(os.path.join(param.data_dir,'quality_data',dataset,param.score_file_name),"a")

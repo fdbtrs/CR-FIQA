@@ -21,6 +21,8 @@ def parse_arguments(argv):
                         help='digit number in backbone file name')
     parser.add_argument('--relative_dir', type=str, default='./data',
                         help='path to save the embeddings')
+    parser.add_argument('--color_channel', type=str, default="BGR",
+                        help='input image color channel, two option RGB or BGR')
     return parser.parse_args(argv)
 
 
@@ -58,7 +60,7 @@ def main(param):
         exit()
 
     features = face_model.get_batch_feature(image_path_list)
-    features_flipped = face_model.get_batch_feature(image_path_list, flip=1)
+    features_flipped = face_model.get_batch_feature(image_path_list, flip=1,color=param.color_channel)
 
     # too slow for IJBC
     # conc_features = np.concatenate((features, features_flipped), axis=1)

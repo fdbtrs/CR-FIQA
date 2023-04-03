@@ -66,10 +66,10 @@ The quality score of LFW, AgeDB-30, CFP-FP, CALFW, CPLFW can be produced by foll
 4. Run evaluation/getQualityScore.py to estimate the quality scores  
     1. CR-FIQA(L)  
         1. Download the pretrained model
-        2. run: python3 evaluation/getQualityScorce.py --data_dir "./data/quality_data" --datasets "XQLFW" --model_path "path_to_pretrained_CF_FIQAL_model" --backbone "iresnet100" --model_id "181952" --score_file_name "CRFIQAL.txt"   
+        2. run: python3 evaluation/getQualityScorce.py --data_dir "./data/quality_data" --datasets "XQLFW" --model_path "path_to_pretrained_CF_FIQAL_model" --backbone "iresnet100" --model_id "181952" --score_file_name "CRFIQAL.txt"   --color_channel "BGR"
     2. CR-FIQA(S)
         1. Download the pretrained model
-        2. run: python3 evaluation/getQualityScorce.py --data_dir "./data/quality_data" --datasets "XQLFW" --model_path "path_to_pretrained_CF_FIQAL_model" --backbone "iresnet50" --model_id "32572" --score_file_name "CRFIQAS.txt"
+        2. run: python3 evaluation/getQualityScorce.py --data_dir "./data/quality_data" --datasets "XQLFW" --model_path "path_to_pretrained_CF_FIQAL_model" --backbone "iresnet50" --model_id "32572" --score_file_name "CRFIQAS.txt" --color_channel "BGR"
         
      
 ## Ploting ERC curves ##
