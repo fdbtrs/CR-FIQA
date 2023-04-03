@@ -46,7 +46,8 @@ Set the following in the config.py
 
 ## Evaluation ##
 Follow these steps to reproduce the results on XQLFW:
-1. Download the [XQLFW](https://martlgap.github.io/xqlfw/pages/download.html) (please download xqlfw_aligned_112.zip)
+1. Download the **aligned** [XQLFW](https://martlgap.github.io/xqlfw/pages/download.html) (please download xqlfw_aligned_112.zip)
+2. Note: if you have an unaligned dataset, please do alignment first using [Alignment](https://github.com/fdbtrs/SFace-Privacy-friendly-and-Accurate-Face-Recognition-using-Synthetic-Data/blob/master/utils/MTCNN_alignment_fast.py)
 2. Unzip XQLFW (Folder structure should look like this ./data/XQLFW/xqlfw_aligned_112/)
 3. Download also xqlfw_pairs.txt to ./data/XQLFW/xqlfw_pairs.txt
 4. Set (in feature_extraction/extract_xqlfw.py) path = "./data/XQLFW" to your XQLFW data folder and outpath = "./data/quality_data" where you want to save the preprocessed data
@@ -58,7 +59,7 @@ Follow these steps to reproduce the results on XQLFW:
     2. CR-FIQA(S)
         1. Download the pretrained model
         2. run: python3 evaluation/getQualityScorce.py --data_dir "./data/quality_data" --datasets "XQLFW" --model_path "path_to_pretrained_CF_FIQAL_model" --backbone "iresnet50" --model_id "32572" --score_file_name "CRFIQAS.txt"
-        
+#### Note: Our model process an aligned image using ([Alignment](https://github.com/fdbtrs/SFace-Privacy-friendly-and-Accurate-Face-Recognition-using-Synthetic-Data/blob/master/utils/MTCNN_alignment_fast.py)). The images should be of RGB color space. If you are using OpenCV to load the images, make sure to convert from BGR to RGB as OpenCV converts the color channel when it is loaded with OpenCV read command. All images are processed to have pixel values between -1 and 1 as in [QualityModel.py](https://github.com/fdbtrs/CR-FIQA/blob/main/evaluation/QualityModel.py)         
 The quality score of LFW, AgeDB-30, CFP-FP, CALFW, CPLFW can be produced by following these steps:
 1. LFW, AgeDB-30, CFP-FP, CALFW, CPLFW are be included in the training dataset folder [insightface](https://github.com/deepinsight/insightface/tree/master/recognition/_datasets_)
 2. Set (in extract_bin.py) path = "/data/faces_emore/lfw.bin" to your LFW bin file and outpath = "./data/quality_data" where you want to save the preprocessed data (subfolder will be created)
