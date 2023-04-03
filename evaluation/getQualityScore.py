@@ -24,6 +24,8 @@ def parse_arguments(argv):
                         help=' iresnet100 or iresnet50 ')
     parser.add_argument('--score_file_name', type=str, default="quality_r50.txt",
                         help='score file name, the file will be store in the same data dir')
+    parser.add_argument('--color_channel', type=str, default="BGR",
+                        help='input image color channel, two option RGB or BGR')
     #
 
     return parser.parse_args(argv)

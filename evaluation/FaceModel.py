@@ -25,7 +25,7 @@ class FaceModel():
         emb = normalize(emb.reshape(1, -1))
         return emb
 
-    def get_batch_feature(self, image_path_list, batch_size=16):
+    def get_batch_feature(self, image_path_list, batch_size=16, color="BGR"):
         count = 0
         num_batch =  int(len(image_path_list) / batch_size)
         features = []
@@ -42,6 +42,8 @@ class FaceModel():
             for image_path in tmp_list:
                 image = cv2.imread(image_path)
                 image = cv2.resize(image, (112, 112))
+                if (color=="RGB"):
+                    image=cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
                 a = np.transpose(image, (2, 0, 1))
                 images.append(a)
             input_blob = np.array(images)

@@ -27,7 +27,7 @@ class FaceModel():
         #print(type(emb), emb.shape)
         return emb
 
-    def get_batch_feature(self, image_path_list, batch_size=64, flip=0):
+    def get_batch_feature(self, image_path_list, batch_size=64, flip=0, color="BGR"):
         count = 0
         num_batch =  int(len(image_path_list) / batch_size)
         features = []
@@ -43,6 +43,8 @@ class FaceModel():
             for image_path in tmp_list:
                 image = cv2.imread(image_path)
                 image = cv2.resize(image, (112, 112))
+                if (color == "RGB"):
+                    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
                 if flip == 1:
                     image = cv2.flip(image, 1)      # flip image horizontally
                 # a = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
