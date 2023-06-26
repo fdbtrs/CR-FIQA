@@ -83,13 +83,13 @@ The quality score of LFW, AgeDB-30, CFP-FP, CALFW, CPLFW can be produced by foll
 ## Citation ##
 If you use any of the code provided in this repository or the models provided, please cite the following paper:
 ```
-@misc{boutros2021crfiqa,
-      title={CR-FIQA: Face Image Quality Assessment by Learning Sample Relative Classifiability}, 
-      author={Fadi Boutros and Meiling Fang and Marcel Klemt and Biying Fu and Naser Damer},
-      year={2021},
-      eprint={2112.06592},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@InProceedings{Boutros_2023_CVPR,
+    author    = {Boutros, Fadi and Fang, Meiling and Klemt, Marcel and Fu, Biying and Damer, Naser},
+    title     = {CR-FIQA: Face Image Quality Assessment by Learning Sample Relative Classifiability},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2023},
+    pages     = {5836-5845}
 }
 ```
 
