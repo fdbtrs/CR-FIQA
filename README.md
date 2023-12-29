@@ -55,10 +55,10 @@ Follow these steps to reproduce the results on XQLFW:
 6. Run evaluation/getQualityScore.py to estimate the quality scores  
     1. CR-FIQA(L)  
         1. Download the pretrained model
-        2. run: python3 evaluation/getQualityScorce.py --data_dir "./data/quality_data" --datasets "XQLFW" --model_path "path_to_pretrained_CF_FIQAL_model" --backbone "iresnet100" --model_id "181952" --score_file_name "CRFIQAL.txt"  
+        2. run: python3 evaluation/getQualityScore.py --data_dir "./data/quality_data" --datasets "XQLFW" --model_path "path_to_pretrained_CF_FIQAL_model" --backbone "iresnet100" --model_id "181952" --score_file_name "CRFIQAL.txt"  
     2. CR-FIQA(S)
         1. Download the pretrained model
-        2. run: python3 evaluation/getQualityScorce.py --data_dir "./data/quality_data" --datasets "XQLFW" --model_path "path_to_pretrained_CF_FIQAL_model" --backbone "iresnet50" --model_id "32572" --score_file_name "CRFIQAS.txt"
+        2. run: python3 evaluation/getQualityScore.py --data_dir "./data/quality_data" --datasets "XQLFW" --model_path "path_to_pretrained_CF_FIQAL_model" --backbone "iresnet50" --model_id "32572" --score_file_name "CRFIQAS.txt"
 #### Note: Our model process an aligned image using ([Alignment](https://github.com/fdbtrs/SFace-Privacy-friendly-and-Accurate-Face-Recognition-using-Synthetic-Data/blob/master/utils/MTCNN_alignment_fast.py)). The images should be of RGB color space. If you are using OpenCV to load the images, make sure to convert from BGR to RGB as OpenCV converts the color channel when it is loaded with OpenCV read command. All images are processed to have pixel values between -1 and 1 as in [QualityModel.py](https://github.com/fdbtrs/CR-FIQA/blob/main/evaluation/QualityModel.py)         
 The quality score of LFW, AgeDB-30, CFP-FP, CALFW, CPLFW can be produced by following these steps:
 1. LFW, AgeDB-30, CFP-FP, CALFW, CPLFW are be included in the training dataset folder [insightface](https://github.com/deepinsight/insightface/tree/master/recognition/_datasets_)
@@ -67,10 +67,10 @@ The quality score of LFW, AgeDB-30, CFP-FP, CALFW, CPLFW can be produced by foll
 4. Run evaluation/getQualityScore.py to estimate the quality scores  
     1. CR-FIQA(L)  
         1. Download the pretrained model
-        2. run: python3 evaluation/getQualityScorce.py --data_dir "./data/quality_data" --datasets "XQLFW" --model_path "path_to_pretrained_CF_FIQAL_model" --backbone "iresnet100" --model_id "181952" --score_file_name "CRFIQAL.txt"   --color_channel "BGR"
+        2. run: python3 evaluation/getQualityScore.py --data_dir "./data/quality_data" --datasets "XQLFW" --model_path "path_to_pretrained_CF_FIQAL_model" --backbone "iresnet100" --model_id "181952" --score_file_name "CRFIQAL.txt"   --color_channel "BGR"
     2. CR-FIQA(S)
         1. Download the pretrained model
-        2. run: python3 evaluation/getQualityScorce.py --data_dir "./data/quality_data" --datasets "XQLFW" --model_path "path_to_pretrained_CF_FIQAL_model" --backbone "iresnet50" --model_id "32572" --score_file_name "CRFIQAS.txt" --color_channel "BGR"
+        2. run: python3 evaluation/getQualityScore.py --data_dir "./data/quality_data" --datasets "XQLFW" --model_path "path_to_pretrained_CF_FIQAL_model" --backbone "iresnet50" --model_id "32572" --score_file_name "CRFIQAS.txt" --color_channel "BGR"
         
      
 ## Ploting ERC curves ##
