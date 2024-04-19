@@ -4,6 +4,12 @@
 ### Paper accepted at [CVPR 2023](https://cvpr2023.thecvf.com/)
 Arxiv: [CR-FIQA](https://arxiv.org/abs/2112.06592)
 
+
+#### <red>Update</red>
+- New paper accepted at CVPRW 2024: raFIQs: Face Image Quality Assessment Using Gradient Magnitudes
+  https://github.com/jankolf/GraFIQs
+
+  
 <img src="utils/workflow.png"> 
 
 <hr/>
