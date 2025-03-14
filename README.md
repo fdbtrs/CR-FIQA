@@ -6,7 +6,7 @@ Arxiv: [CR-FIQA](https://arxiv.org/abs/2112.06592)
 ### News: 𝗿𝗮𝗻𝗸𝗲𝗱 𝟭𝘀𝘁/𝟮𝗻𝗱 at 𝗡𝗜𝗦𝗧 𝗙𝗮𝗰𝗲 𝗔𝗻𝗮𝗹𝘆𝘀𝗶𝘀 𝗧𝗲𝗰𝗵𝗻𝗼𝗹𝗼𝗴𝘆 𝗘𝘃𝗮𝗹𝘂𝗮𝘁𝗶𝗼𝗻 (𝗙𝗔𝗧𝗘) 𝗤𝘂𝗮𝗹𝗶𝘁𝘆
 
 https://pages.nist.gov/frvt/html/frvt_quality.html
-
+<img src="utils/NIST.png"> 
 #### <red>Update</red>
 - New paper accepted at [CVPRW 2024](https://cvpr2023.thecvf.com/): GraFIQs: Face Image Quality Assessment Using Gradient Magnitudes
   https://github.com/jankolf/GraFIQs
