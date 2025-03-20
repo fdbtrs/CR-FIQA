@@ -8,7 +8,7 @@ from evaluation.QualityModel import QualityModel
 def parse_arguments(argv):
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--data-dir', type=str, default='./data',
+    parser.add_argument('--data_dir', type=str, default='./data',
                         help='Root dir for evaluation dataset')
     parser.add_argument('--pairs', type=str, default='pairs.txt',
                         help='lfw pairs.')
