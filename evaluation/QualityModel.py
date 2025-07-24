@@ -4,8 +4,8 @@ from backbones.iresnet import iresnet100, iresnet50
 from evaluation.FaceModel import FaceModel
 import torch
 class QualityModel(FaceModel):
-    def __init__(self, model_prefix, model_epoch, gpu_id):
-        super(QualityModel, self).__init__(model_prefix, model_epoch, gpu_id)
+    def __init__(self, model_prefix, model_epoch, gpu_id, backbone):
+        super(QualityModel, self).__init__(model_prefix, model_epoch, gpu_id, backbone=backbone)
 
     def _get_model(self, ctx, image_size, prefix, epoch, layer, backbone):
         weight = torch.load(os.path.join(prefix,epoch+"backbone.pth"))
