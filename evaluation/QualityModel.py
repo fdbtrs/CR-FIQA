@@ -5,7 +5,7 @@ from evaluation.FaceModel import FaceModel
 import torch
 class QualityModel(FaceModel):
     def __init__(self, model_prefix, model_epoch, gpu_id):
-        super(QualityModel, self).__init__(model_prefix, model_epoch, gpu_id)
+        super(QualityModel, self).__init__(model_prefix, model_epoch, gpu_id, backbone='iresnet50')
 
     def _get_model(self, ctx, image_size, prefix, epoch, layer, backbone):
         weight = torch.load(os.path.join(prefix,epoch+"backbone.pth"))
